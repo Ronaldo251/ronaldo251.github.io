@@ -22,12 +22,9 @@
     height: 200px;
 }
 
-.header .title {
+.header .title{
     font-family: 'Neue Machina';
     text-align: center;
-    white-space: nowrap; /* ⛔ impede a quebra de linha */
-    overflow: hidden;     /* Evita overflow visual */
-    text-overflow: ellipsis; /* Opcional: adiciona "..." se o texto for muito longo */
 }
 
 .header .information{
