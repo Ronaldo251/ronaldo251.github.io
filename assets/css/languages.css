@@ -10,7 +10,7 @@
 */
 .languages {
     display: flex;
-    flex-direction: column; /* <-- Aqui está a chave! */
+    flex-direction: column; 
     align-items: flex-start;
     margin: 0;
     padding: 0;
