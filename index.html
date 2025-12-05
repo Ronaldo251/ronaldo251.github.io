@@ -1,182 +1,379 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Ronaldo Fraga</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/acordeon.css">
-    <link rel="stylesheet" href="/assets/css/languages.css">
-    <link rel="stylesheet" href="/assets/css/portifolio.css">
-    <link rel="stylesheet" href="/assets/css/experience.css">
-    <link rel="stylesheet" href="/assets/css/skills.css">
+    <title>Portfólio | Ronaldo Fraga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <main class="main">
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="https://github.com/Ronaldo251.png" alt="Ronaldo Fraga">
+                    </div>
+                </div>
 
-        <header class="header">
-            <img class="photo" src="/assets/img/fotor_2023-5-19_11_0_58.png" alt="Foto de Ronaldo Fraga">
-            <h1 class="title">Ronaldo Fraga</h1>
+                <div class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i> Fortaleza - CE
+                </div>
 
-            <div class="information">
-                <p class="job">Junior FullStack Developer</p>
-                <p class="location">Fortaleza/CE</p>
-                <p class="phone"><a href="https://wa.me/85989395917" target="_blank">(85) 9.8939-5917</a></p>
-                <p class="email"><a href="mailto:naldoforrf@gmail.com" target="_blank">naldoforrf@gmail.com</a></p>
-            </div>
-        </header>
-        
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Sobre Mim</h2>
-            </button>
-            <div class="content">
-                <p>
-                  Desenvolvedor FullStack com experiência em criação de soluções web personalizadas utilizando Django, WordPress, PHP, Docker e Git. Interesse em automação de processos, performance e segurança de aplicações.
-                </p>
-            </div>
-        </section>
+                <div class="tech-skills">
+                    <h3>HABILIDADES TÉCNICAS</h3>
+                    
+                    <div class="skill-group">
+                        <strong>Backend & Linguagens:</strong>
+                        <p>Python (Django, Flask, DRF), PHP, C/C++, SQL, JavaScript.</p>
+                    </div>
 
+                    <div class="skill-group">
+                        <strong>Infra & DevOps:</strong>
+                        <p>Docker, AWS, Git/GitLab, Linux (Termux/Server), Bash.</p>
+                    </div>
 
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Certificações</h2>
-            </button>
-            <div class="content">
-                <ul class="certificacoes">
-                    <li>
-                        <a href="https://cert.efset.org/5TKjXf" target="_blank">
-                        Certificado Nivel de Inglês C2
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/assets/certificados/wordpress-avancado.pdf" target="_blank">
-                        Certificação WordPress Avançado
-                    </a>
-                    </li>
-                </ul>
-            </div>
-</section>
+                    <div class="skill-group">
+                        <strong>Dados:</strong>
+                        <p>PostgreSQL, MySQL, SQLite, MongoDB.</p>
+                    </div>
 
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Idiomas</h2>
-            </button>
-            <div class="content">
-                <ul class="languages">
-                    <li>Português - Nativo</li>
-                    <li>Inglês - C2</li>
-                    <li>Espanhol - B1</li>
-                </ul>
-            </div>
-
-            </div>
-        </section>
-
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Portfólio</h2>
-            </button>
-            <div class="content">
-                <ul class="portifolio">
-                    <li>
-                        <h3 class="title github">Agenda de Compromissos com Django</h3>
-                        <a href="https://github.com/Ronaldo251/Agenda_Django" target="_blank">https://github.com/Ronaldo251/Agenda_Django</a>
-                    </li>
-                    <li>
-                        <h3 class="title github">Game Dark Invaders com PyGame</h3>
-                        <a href="https://github.com/Ronaldo251/Dark_Space" target="_blank">https://github.com/Ronaldo251/Dark_Space</a>
-                    </li>
-                    <li>
-                        <h3 class="title github">Aplicativo Django para Mecânicos e Lava-Jatos</h3>
-                        <a href="https://github.com/Ronaldo251/mecajato" target="_blank">https://github.com/Ronaldo251/mecajato</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Skills</h2>
-            </button>
-            <div class="content">
-                <div class="skills">
-                    <section class="tools">
-                        <h3>Habilidades Profissionais:</h3>
-                        <ul>
-                            <li><img src="/assets/img/icons/Languages/pythonc.svg" alt="Python" title="Python"></li>
-                            <li><img src="/assets/img/icons/Languages/django.svg" alt="Django" title="Django"></li>
-                            <li><img src="/assets/img/icons/Languages/postgresql.svg" alt="PostgreSQL" title="PostgreSQL"></li>
-                        </ul>
-                        <ul>
-                            <li><img src="/assets/img/icons/Languages/javascript.svg" alt="JavaScript" title="JavaScript"></li>
-                            <li><img src="/assets/img/icons/Languages/html.svg" alt="HTML" title="HTML"></li>
-                            <li><img src="/assets/img/icons/Languages/css.svg" alt="CSS" title="CSS"></li>
-                        </ul>
-                    </section>
-
-                    <section class="personal">
-                        <h3>Habilidades Pessoais:</h3>
-                        <ul>
-                            <li class="lista1">Liderança</li>
-                            <li class="lista1">Comunicação</li>
-                            <li class="lista1">Gerenciamento</li>
-                            <li class="lista1">Trabalho em equipe</li>
-                            <li class="lista1">Resolução de Problemas</li>
-                        </ul>
-                    </section>
+                    <div class="skill-group">
+                        <strong>Segurança:</strong>
+                        <p>Cybersecurity, Ethical Hacking e LGPD.</p>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <strong>Idiomas:</strong>
+                        <p>Inglês Proficiente (C2 - EF SET).</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
+        <div class="main-content">
+            
+            <section id="home" class="section active">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="title">
+                            <div class="title-line"></div>
+                            <h1>RONALDO FRAGA.</h1>
+                            <h2>FULLSTACK DEVELOPER</h2>
+                        </div>
+                        <div class="description">
+                            <p>Desenvolvedor focado na entrega de soluções web escaláveis e automação de processos operacionais.
+                                Especialista na construção de arquiteturas robustas <strong>(Django/Python)</strong> e APIs RESTful, com histórico de
+                                modernização de portais governamentais e criação de ferramentas para aumento de produtividade de
+                                equipes. Profissional orientado à segurança da informação e performance, em busca de desafios que
+                                unam desenvolvimento backend complexo e eficiência de dados.
+                            </p>
+                        </div>
+                        <div class="cta">
+                            <a href="#about" class="btn-more nav-trigger" data-target="about">
+                                SAIBA MAIS
+                                <span class="arrow-icon"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Educação</h2>
-            </button>
-            <div class="content">
-                <ul class="educacao">
-                    <li>
-                        <h3>UNESA - Análise e Desenvolvimento de Sistemas</h3>
-                        <p>Período: 01/2023 - 12/2025</p>
-                    </li>
-                    <li>
-                        <h3>IFCE - Engenharia de Telecomunicações</h3>
-                        <p>Período: 08/2018 - 12/2022</p>
-                    </li>
-                </ul>
+            <section id="about" class="section">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="title">
+                            <div class="title-line"></div>
+                            <h2>MINHA JORNADA</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <h3 style="color: var(--accent-color); margin-bottom: 10px;">BIO</h3>
+                            <p style="margin-bottom: 20px;">
+                                Desenvolvedor focado na entrega de soluções web escaláveis e automação de processos. Especialista na construção de arquiteturas robustas com <strong>Django/Python</strong> e APIs RESTful. Possuo histórico comprovado na modernização de portais governamentais e criação de ferramentas para aumento de produtividade, unindo desenvolvimento backend complexo à eficiência de dados.
+                            </p>
+                            
+                            <ul class="personal-info" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 30px;">
+                                <li><strong style="color: var(--text-primary);">Idade:</strong> <span style="color: var(--text-secondary);">25 Anos</span></li>
+                                <li><strong style="color: var(--text-primary);">Cidade:</strong> <span style="color: var(--text-secondary);">Fortaleza, CE</span></li>
+                                <li><strong style="color: var(--text-primary);">Inglês:</strong> <span style="color: var(--text-secondary);">C2 (Fluente - EF SET)</span></li>
+                                <li><strong style="color: var(--text-primary);">Foco:</strong> <span style="color: var(--text-secondary);">Python, Django, Security</span></li>
+                            </ul>
+
+                            <h3 style="color: var(--accent-color); margin-bottom: 15px;">EXPERIÊNCIA PROFISSIONAL</h3>
+                            
+                            <div class="resume-item" style="margin-bottom: 20px; border-left: 2px solid var(--accent-color); padding-left: 15px;">
+                                <h4 style="color: var(--text-primary); font-size: 1.1rem;">Ministério Público do Ceará (MPCE)</h4>
+                                <span style="color: var(--accent-color); font-size: 0.85rem; font-weight: bold;">Mai/2025 – Atual</span>
+                                <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 5px;">Desenvolvimento FullStack e WebDesign (Estágio)</p>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                                    Atuação na modernização crítica do portal institucional (PHP/WordPress). Desenvolvimento de plugins para automação de fluxos, implementação de pipelines CI/CD com GitLab e gestão de deploy via Docker/FTP.
+                                </p>
+                            </div>
+
+                            <div class="resume-item" style="margin-bottom: 20px; border-left: 2px solid #555; padding-left: 15px;">
+                                <h4 style="color: var(--text-primary); font-size: 1.1rem;">Multiplay Rede Nordeste</h4>
+                                <span style="color: #999; font-size: 0.85rem;">Fev/2020 – Nov/2020</span>
+                                <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 5px;">Estágio em Projetos e Análise de Dados</p>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                                    Planejamento estratégico de projetos FTTH (Fibra Óptica) e análise de grandes volumes de dados georreferenciados para otimização de infraestrutura.
+                                </p>
+                            </div>
+
+                            <div class="resume-item" style="margin-bottom: 30px; border-left: 2px solid #555; padding-left: 15px;">
+                                <h4 style="color: var(--text-primary); font-size: 1.1rem;">Exército Brasileiro (16ª Cia PE)</h4>
+                                <span style="color: #999; font-size: 0.85rem;">Ago/2018 – Ago/2019</span>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                                    Desenvolvimento de alta resiliência, disciplina e tomada de decisão sob pressão em ambientes críticos.
+                                </p>
+                            </div>
+
+                            <h3 style="color: var(--accent-color); margin-bottom: 15px;">FORMAÇÃO</h3>
+                            <div class="resume-item" style="border-left: 2px solid var(--accent-color); padding-left: 15px;">
+                                <h4 style="color: var(--text-primary);">Análise e Desenvolvimento de Sistemas</h4>
+                                <p style="color: var(--text-secondary);">Centro Universitário Estácio | <span style="color: var(--accent-color);">Conclusão: Dez/2025</span></p>
+                            </div>
+
+                            <div class="cta" style="margin-top: 30px;">
+                                <a href="#" class="btn-more">DOWNLOAD CV COMPLETO <span class="arrow-icon"><i class="fas fa-download"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="section">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="title">
+                            <div class="title-line"></div>
+                            <h1>PORTFÓLIO</h1>
+                            <h2>MEUS PROJETOS</h2>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-grid">
+                        <div class="portfolio-item">
+                            <div class="portfolio-icon"><i class="fas fa-shopping-bag"></i></div>
+                            <h3>WebLog Market</h3>
+                            <p>SaaS Multi-loja com Django. Vitrines personalizáveis e checkout via WhatsApp.</p>
+                            <button onclick="openProject('weblog')" class="btn-details">Ver Detalhes</button>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-icon"><i class="fas fa-headset"></i></div>
+                            <h3>AliDash System</h3>
+                            <p>Helpdesk Omnichannel com filas inteligentes e chat em tempo real via WebSocket.</p>
+                            <button onclick="openProject('alidash')" class="btn-details">Ver Detalhes</button>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <h3>Agenda Django</h3>
+                            <p>Gestão de compromissos com autenticação segura e organização de horários.</p>
+                            <button onclick="openProject('agenda')" class="btn-details">Ver Detalhes</button>
+                        </div>
+
+                        <div class="portfolio-item">
+                            <div class="portfolio-icon"><i class="fas fa-gamepad"></i></div>
+                            <h3>Dark Invaders</h3>
+                            <p>Jogo 2D estilo arcade desenvolvido do zero com Python e PyGame.</p>
+                            <button onclick="openProject('game')" class="btn-details">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                    <h2 id="modal-title">Titulo do Projeto</h2>
+                    <div class="modal-body">
+                        <p id="modal-desc">Descrição completa aqui...</p>
+                        
+                        <div class="modal-techs">
+                            <strong>Tecnologias:</strong> <span id="modal-techs-list">Python, Django</span>
+                        </div>
+
+                        <div class="modal-image-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+
+                        <a id="modal-github" href="#" target="_blank" class="btn-more">
+                            ACESSAR REPOSITÓRIO <span class="arrow-icon"><i class="fab fa-github"></i></span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section class="acordeon">
-            <button class="trigger" type="button">
-                <h2>Experiência Profissional</h2>
-            </button>
-            <div class="content">
-                <ul class="experience">
-                    <li>
-                        <h3>FullStack Software Developer</h3>
-                        <p>
-                            <strong>Período:</strong> 05/2025 - Atual<br><br>
-                            Atuei na engenharia e manutenção do portal institucional do Ministério Público do Estado do Ceará (MPCE) em ambiente WordPress. Foco na criação de plugins personalizados em PHP para automação de processos internos e aprimoramento de funcionalidades do sistema, com persistência de dados em JSON. Desenvolvi interfaces dinâmicas com JavaScript, HTML5 e CSS3. Gerenciei ambientes conteinerizados com Docker, versionamento de código via GitLab e manutenção de ativos por FTP utilizando FileZilla.
-                            <br><br>
-                            <strong>Keywords:</strong> WordPress, PHP, JavaScript, HTML, CSS, Docker, GitLab, FTP.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
+            <section id="contact" class="section">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="title">
+                            <div class="title-line"></div>
+                            <h1>CONTATO</h1>
+                            <h2>VAMOS CONVERSAR</h2>
+                        </div>
+                        <div class="description">
+                            <p>Estou disponível para projetos freelance e oportunidades full-time.</p>
+                            <ul class="contact-list">
+                                <li><i class="fab fa-whatsapp"></i> (85) 9.8939-5917</li>
+                                <li><i class="fas fa-envelope"></i> naldoforrf@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <script src="/assets/js/acordeon.js"></script>
+        </div> <div class="nav-menu">
+            <ul>
+                <li class="active"><a href="#home" class="nav-link" data-target="home"><i class="fas fa-home"></i></a></li>
+                <li><a href="#about" class="nav-link" data-target="about"><i class="fas fa-user"></i></a></li>
+                <li><a href="#portfolio" class="nav-link" data-target="portfolio"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="#contact" class="nav-link" data-target="contact"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="theme-toggle">
+            <button id="theme-btn"><i class="fas fa-sun"></i></button>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. SELEÇÃO DE ELEMENTOS (Declarados apenas uma vez) ---
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+        const btnMore = document.querySelector('.nav-trigger'); // Botão "Saiba Mais"
+        const themeBtn = document.getElementById('theme-btn');  // Botão do Tema
+
+        // --- 2. FUNÇÃO DE NAVEGAÇÃO (SPA) ---
+        function switchSection(targetId) {
+            // Esconde todas as seções
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            // Remove a classe 'active' de todos os itens do menu (li)
+            navLinks.forEach(link => {
+                if (link.parentElement) {
+                    link.parentElement.classList.remove('active');
+                }
+            });
+
+            // Mostra a seção desejada (pelo ID)
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Adiciona a classe 'active' no item do menu correspondente
+            navLinks.forEach(link => {
+                if(link.getAttribute('data-target') === targetId) {
+                    if (link.parentElement) {
+                        link.parentElement.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // --- 3. EVENTOS DE CLIQUE NO MENU ---
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault(); // Evita o comportamento padrão do link
+                const targetId = link.getAttribute('data-target'); // Pega o alvo (ex: 'home', 'about')
+                if (targetId) {
+                    switchSection(targetId);
+                }
+            });
+        });
+
+        // --- 4. EVENTO DO BOTÃO "SAIBA MAIS" ---
+        if (btnMore) {
+            btnMore.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Força a ida para a seção "about" (Sobre Mim)
+                switchSection('about');
+            });
+        }
+
+        // --- 5. LÓGICA DO TEMA (LIGHT/DARK) ---
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                
+                // Troca o ícone (Sol <-> Lua)
+                const icon = themeBtn.querySelector('i');
+                if (icon) {
+                    if (document.body.classList.contains('light-mode')) {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                    } else {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                    }
+                }
+            });
+        }
+        const projectsData = {
+            'weblog': {
+                title: 'WebLog Market SaaS',
+                desc: 'Plataforma SaaS completa desenvolvida com Django para criação de lojas virtuais. O sistema permite que lojistas criem suas vitrines com subdomínios próprios.\n\nPrincipais Funcionalidades:\n• Painel do Lojista (Gestão de Produtos/Categorias)\n• Checkout transparente com envio de pedido via WhatsApp\n• Sistema de Planos (SaaS) e personalização de tema\n• Arquitetura Multi-tenant com subdomínios isolados.',
+                techs: 'Python, Django, PostgreSQL, Bootstrap, WhatsApp API',
+                link: 'https://github.com/Ronaldo251/WebLog'
+            },
+            'alidash': {
+                title: 'AliDash Omnichannel',
+                desc: 'Sistema de Helpdesk moderno focado em atendimento via Chat e Tickets. Utiliza WebSockets para comunicação em tempo real entre cliente e agente.\n\nDestaques:\n• Filas de atendimento inteligentes (FIFO)\n• Dashboard de métricas em tempo real (TMA/TME)\n• Interface do Agente e do Admin separadas (RBAC)\n• Notificações via Django Signals.',
+                techs: 'Python, Django Channels, WebSocket, Redis, DRF',
+                link: 'https://github.com/SEU_USUARIO/alidash-system'
+            },
+            'agenda': {
+                title: 'Agenda Pessoal Segura',
+                desc: 'Aplicação web para gerenciamento de compromissos pessoais e profissionais. Foco total em segurança e autenticação de usuários.\n\nFuncionalidades:\n• Sistema de Login/Cadastro seguro\n• CRUD completo de eventos\n• Filtros por data e prioridade\n• Interface responsiva.',
+                techs: 'Python, Django, SQLite, CSS3',
+                link: 'https://github.com/Ronaldo251/Agenda_Django'
+            },
+            'game': {
+                title: 'Dark Invaders Arcade',
+                desc: 'Jogo 2D estilo "Space Invaders" desenvolvido para praticar lógica de programação e orientação a objetos.\n\nDesafios vencidos:\n• Detecção de colisão manual\n• Gerenciamento de estados do jogo (Menu, Play, Game Over)\n• Sistema de pontuação e recordes locais.',
+                techs: 'Python, PyGame, POO',
+                link: 'https://github.com/Ronaldo251/Dark_Space'
+            }
+        };
+
+        // --- FUNÇÕES DO MODAL ---
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-desc');
+        const modalTechs = document.getElementById('modal-techs-list');
+        const modalLink = document.getElementById('modal-github');
+
+        function openProject(projectId) {
+            const project = projectsData[projectId];
+            if(project) {
+                modalTitle.innerText = project.title;
+                modalDesc.innerText = project.desc;
+                modalTechs.innerText = project.techs;
+                modalLink.href = project.link;
+                
+                // Abre o modal
+                modal.classList.add('show');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('show');
+        }
+
+        // Fecha o modal se clicar fora da caixa branca
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
+
 </html>
