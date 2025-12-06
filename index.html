@@ -138,9 +138,18 @@
                                 <p style="color: var(--text-secondary);">Centro Universitário Estácio | <span style="color: var(--accent-color);">Conclusão: Dez/2025</span></p>
                             </div>
 
-                            <div class="cta" style="margin-top: 30px;">
-                                <a href="#" class="btn-more">DOWNLOAD CV COMPLETO <span class="arrow-icon"><i class="fas fa-download"></i></span></a>
+                            <div class="cta" style="margin-top: 30px; display: flex; gap: 20px; flex-wrap: wrap;">
+                                
+                                <a href="https://drive.google.com/file/d/1M8kYUvomBjyr_miOrl_4QeSciz1Ipw-X/view?usp=sharing" target="blank" class="btn-more">
+                                    DOWNLOAD CV <span class="arrow-icon"><i class="fas fa-download"></i></span>
+                                </a>
+
+                                <a href="#portfolio" class="btn-more nav-trigger" data-target="portfolio">
+                                    VER PORTFÓLIO <span class="arrow-icon"><i class="fas fa-briefcase"></i></span>
+                                </a>
+
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -184,6 +193,12 @@
                             <p>Jogo 2D estilo arcade desenvolvido do zero com Python e PyGame.</p>
                             <button onclick="openProject('game')" class="btn-details">Ver Detalhes</button>
                         </div>
+                        <div class="cta">
+                            <a href="#portfolio" class="btn-more nav-trigger3" data-target="contact">
+                                CONTATO
+                                <span class="arrow-icon"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -219,11 +234,27 @@
                             <h2>VAMOS CONVERSAR</h2>
                         </div>
                         <div class="description">
-                            <p>Estou disponível para projetos freelance e oportunidades full-time.</p>
-                            <ul class="contact-list">
-                                <li><i class="fab fa-whatsapp"></i> (85) 9.8939-5917</li>
-                                <li><i class="fas fa-envelope"></i> naldoforrf@gmail.com</li>
+                            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary);">
+                                Vamos tirar seu projeto do papel? Mais do que escrever código, eu construo soluções com software escalável. Estou à disposição para materializar suas ideias com segurança, performance e inovação.
+                            </p>
+                            
+                            <ul class="contact-list" style="list-style: none; margin-top: 30px;">
+                                <li style="margin-bottom: 15px; font-size: 1.1rem; color: var(--text-primary);">
+                                    <i class="fab fa-whatsapp" style="color: var(--accent-color); margin-right: 15px; font-size: 1.3rem;"></i> 
+                                    (85) 9.8939-5917
+                                </li>
+                                <li style="font-size: 1.1rem; color: var(--text-primary);">
+                                    <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 15px; font-size: 1.3rem;"></i> 
+                                    naldoforrf@gmail.com
+                                </li>
                             </ul>
+
+                            <div class="cta" style="margin-top: 40px;">
+                                <a href="#home" class="btn-more nav-trigger" data-target="home">
+                                    VOLTAR AO INÍCIO
+                                    <span class="arrow-icon"><i class="fas fa-arrow-up"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,78 +275,16 @@
     </div>
 
     <script>
-        // --- 1. SELEÇÃO DE ELEMENTOS (Declarados apenas uma vez) ---
-        const navLinks = document.querySelectorAll('.nav-link');
+        // --- 1. CONFIGURAÇÃO E SELEÇÃO ---
         const sections = document.querySelectorAll('.section');
-        const btnMore = document.querySelector('.nav-trigger'); // Botão "Saiba Mais"
-        const themeBtn = document.getElementById('theme-btn');  // Botão do Tema
+        const navLinks = document.querySelectorAll('.nav-menu a'); // Links do menu lateral
+        const themeBtn = document.getElementById('theme-btn');
+        
+        // Seleciona QUALQUER botão que deva navegar (Menu + Botões "Saiba Mais")
+        // Isso inclui os links laterais e os botões grandes com data-target
+        const allNavTriggers = document.querySelectorAll('[data-target]');
 
-        // --- 2. FUNÇÃO DE NAVEGAÇÃO (SPA) ---
-        function switchSection(targetId) {
-            // Esconde todas as seções
-            sections.forEach(sec => sec.classList.remove('active'));
-            
-            // Remove a classe 'active' de todos os itens do menu (li)
-            navLinks.forEach(link => {
-                if (link.parentElement) {
-                    link.parentElement.classList.remove('active');
-                }
-            });
-
-            // Mostra a seção desejada (pelo ID)
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-
-            // Adiciona a classe 'active' no item do menu correspondente
-            navLinks.forEach(link => {
-                if(link.getAttribute('data-target') === targetId) {
-                    if (link.parentElement) {
-                        link.parentElement.classList.add('active');
-                    }
-                }
-            });
-        }
-
-        // --- 3. EVENTOS DE CLIQUE NO MENU ---
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault(); // Evita o comportamento padrão do link
-                const targetId = link.getAttribute('data-target'); // Pega o alvo (ex: 'home', 'about')
-                if (targetId) {
-                    switchSection(targetId);
-                }
-            });
-        });
-
-        // --- 4. EVENTO DO BOTÃO "SAIBA MAIS" ---
-        if (btnMore) {
-            btnMore.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Força a ida para a seção "about" (Sobre Mim)
-                switchSection('about');
-            });
-        }
-
-        // --- 5. LÓGICA DO TEMA (LIGHT/DARK) ---
-        if (themeBtn) {
-            themeBtn.addEventListener('click', () => {
-                document.body.classList.toggle('light-mode');
-                
-                // Troca o ícone (Sol <-> Lua)
-                const icon = themeBtn.querySelector('i');
-                if (icon) {
-                    if (document.body.classList.contains('light-mode')) {
-                        icon.classList.remove('fa-sun');
-                        icon.classList.add('fa-moon');
-                    } else {
-                        icon.classList.remove('fa-moon');
-                        icon.classList.add('fa-sun');
-                    }
-                }
-            });
-        }
+        // --- 2. DADOS DOS PROJETOS (MODAL) ---
         const projectsData = {
             'weblog': {
                 title: 'WebLog Market SaaS',
@@ -343,35 +312,83 @@
             }
         };
 
-        // --- FUNÇÕES DO MODAL ---
+        // --- 3. FUNÇÃO DE NAVEGAÇÃO (SPA) ---
+        function switchSection(targetId) {
+            // Esconde todas as seções
+            sections.forEach(sec => sec.classList.remove('active'));
+            
+            // Remove 'active' do menu lateral
+            document.querySelectorAll('.nav-menu li').forEach(li => li.classList.remove('active'));
+
+            // Mostra a seção alvo
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Atualiza o ícone do menu lateral correspondente
+            navLinks.forEach(link => {
+                if(link.getAttribute('data-target') === targetId) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        }
+
+        // Adiciona evento em TODOS os elementos que têm 'data-target'
+        allNavTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                const targetId = trigger.getAttribute('data-target');
+                if (targetId) {
+                    e.preventDefault();
+                    switchSection(targetId);
+                }
+            });
+        });
+
+        // --- 4. FUNÇÕES DO MODAL ---
         const modal = document.getElementById('project-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalDesc = document.getElementById('modal-desc');
         const modalTechs = document.getElementById('modal-techs-list');
         const modalLink = document.getElementById('modal-github');
 
-        function openProject(projectId) {
+        // Torna a função global para ser chamada pelo onclick="" do HTML
+        window.openProject = function(projectId) {
             const project = projectsData[projectId];
             if(project) {
                 modalTitle.innerText = project.title;
                 modalDesc.innerText = project.desc;
                 modalTechs.innerText = project.techs;
                 modalLink.href = project.link;
-                
-                // Abre o modal
                 modal.classList.add('show');
             }
         }
 
-        function closeModal() {
+        window.closeModal = function() {
             modal.classList.remove('show');
         }
 
-        // Fecha o modal se clicar fora da caixa branca
         window.onclick = function(event) {
             if (event.target == modal) {
                 closeModal();
             }
+        }
+
+        // --- 5. LÓGICA DO TEMA (LIGHT/DARK) ---
+        if (themeBtn) {
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                const icon = themeBtn.querySelector('i');
+                if (icon) {
+                    if (document.body.classList.contains('light-mode')) {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                    } else {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                    }
+                }
+            });
         }
     </script>
 </body>

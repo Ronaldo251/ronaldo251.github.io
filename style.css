@@ -153,10 +153,15 @@ body {
 
 /* Conteúdo principal */
 .main-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 0 5%;
+    flex: 1; 
+    padding: 40px 60px;
+    
+    /* REMOVA OU COMENTE ESTAS DUAS LINHAS: */
+    /* display: flex; */
+    /* align-items: center; */
+    
+    /* ADICIONE ISTO: */
+    overflow-y: auto; /* Garante que a rolagem funcione livremente */
 }
 
 .content-wrapper {
@@ -203,32 +208,50 @@ body {
 .cta .btn-more {
     display: inline-flex;
     align-items: center;
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffb400;
-    border-radius: 30px;
-    padding: 12px 30px;
-    font-size: 0.9rem;
-    font-weight: 600;
     text-decoration: none;
+    
+    /* A CORREÇÃO MÁGICA ESTÁ AQUI: */
+    /* Usamos a variável para mudar a cor do texto automaticamente */
+    color: var(--text-primary); 
+    
+    border: 1px solid var(--accent-color); /* Borda Amarela */
+    border-radius: 30px;
+    
+    /* Ajuste de espaçamento para o texto ficar bonito */
+    padding-left: 25px; 
+    padding-right: 0; 
+    
+    font-weight: 700; /* Letra mais grossa para leitura melhor */
     transition: all 0.3s ease;
+    height: 50px;
+    overflow: hidden; /* Garante que a bolinha do ícone fique dentro */
+    cursor: pointer;
+    background-color: transparent; /* Fundo transparente por padrão */
 }
 
 .arrow-icon {
+    width: 50px; /* Largura da bolinha */
+    height: 50px; /* Altura da bolinha */
+    background-color: var(--accent-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    background-color: #ffb400;
-    border-radius: 50%;
-    margin-left: 15px;
+    margin-left: 20px; /* Afasta a bolinha do texto */
+    color: #fff; /* A seta dentro da bolinha sempre branca */
+    transition: 0.3s;
 }
 
 .btn-more:hover {
-    background-color: #ffb400;
+    background-color: var(--accent-color); /* Fundo fica amarelo */
+    border-color: var(--accent-color);
+    
+    /* Quando o fundo é amarelo, o texto tem que ser escuro para ler bem */
+    color: #111 !important; 
+    box-shadow: 0 5px 15px rgba(255, 180, 0, 0.3); /* Brilho */
 }
-
+.btn-more:hover .arrow-icon {
+    color: #111;
+}
 /* Menu de navegação lateral */
 .nav-menu {
     position: fixed;
@@ -407,9 +430,25 @@ body {
 /* --- Estilo Específico: Portfólio (Grid) --- */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    
+    /* 1. Força exatamente 2 colunas de tamanho igual */
+    grid-template-columns: 1fr 1fr; 
+    
+    /* Espaçamento entre os cards */
+    gap: 30px; 
     margin-top: 30px;
+    
+    /* 2. ZONA DE PROTEÇÃO: Empurra o conteúdo 120px para longe da direita.
+       Isso garante que os cards não fiquem embaixo dos botões do menu. */
+    padding-right: 120px; 
+}
+
+/* Responsividade: No celular/tablet, volta para 1 coluna e remove o espaço lateral */
+@media (max-width: 991px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 coluna apenas */
+        padding-right: 0; /* Menu vai para baixo, então não precisa desse espaço */
+    }
 }
 
 .portfolio-item {
